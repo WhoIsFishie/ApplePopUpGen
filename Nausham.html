@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <meta charset="UTF-8">
+    <title>Hi Im Fishie</title>
+    <link rel="stylesheet" href="fishie.css">
+    <link rel="stylesheet" href="home.css">
+    <script src="alert7.js"></script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div id="formContent">
+            <div class="first">
+                <h2>Made By fISHIE</h2>
+            </div>
+            <form>
+                <input type="text" id="Title" class="second" name="Title" placeholder="Title">
+                <input type="text" id="Content" class="third" name="Content" placeholder="Message">
+                <input type="text" id="btn1" class="third" name="btn1" placeholder="Button 1">
+                <input type="text" id="btn2" class="third" name="btn2" placeholder="Button 2">
+                <input type="button" class="fourth" value="Generate" id="alert1">
+            </form>
+        </div>
+    </div>
+
+    <script>
+        $(function() {
+            $('#alert1').click(function() {
+                //checks to see if both values are null
+                if (document.getElementsByName('btn1')[0].value == "" && document.getElementsByName('btn2')[0].value == "") {
+                    Alert7.alert(document.getElementsByName('Title')[0].value, document.getElementsByName('Content')[0].value);
+                }
+                //checks to see if the first button is not null but seccont button is null
+                else if (document.getElementsByName('btn1')[0].value != "" && document.getElementsByName('btn2')[0].value == "") {
+                    var _alertA = new Alert7();
+                    _alertA.setTitle(document.getElementsByName('Title')[0].value);
+                    _alertA.setMessage(document.getElementsByName('Content')[0].value);
+                    _alertA.setType(Alert7.TYPE_CONFIRM);
+                    _alertA.addAction(document.getElementsByName('btn1')[0].value);
+                    _alertA.present();
+                }
+                //if both buttons are not null draw them 
+                else {
+                    var _alertA = new Alert7();
+                    _alertA.setTitle(document.getElementsByName('Title')[0].value);
+                    _alertA.setMessage(document.getElementsByName('Content')[0].value);
+                    _alertA.setType(Alert7.TYPE_CONFIRM);
+                    _alertA.addAction(document.getElementsByName('btn1')[0].value);
+                    _alertA.addAction(document.getElementsByName('btn2')[0].value);
+                    _alertA.present();
+                }
+            });
+        });
+    </script>
+    </div>
+</body>
+
+</html>

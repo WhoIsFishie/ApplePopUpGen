@@ -1,0 +1,44 @@
+.fishiInpt {
+  outline:0;
+  margin: 10px;
+  background-color: #212121;
+  border: 1px solid #333337;
+  color: #e6cf4f;
+  font-size: 15px;
+  height: 50px;
+  line-height: 50px;
+  width: 200px;
+  text-decoration: none;
+  text-align: center;
+}
+
+.fishInpt:hover {
+  border-color: #e6d04f;
+  background-color: #212121;
+}
+.fishInpt:active {
+  border-color: #e6d04f;
+  background-color: #212121;
+}
+
+.fishBtn {
+  outline:0;
+  background-color: #212121;
+  border: 1px solid #333337;
+  color: #e6cf4f;
+
+  font-size: 15px;
+
+  height: 50px;
+  line-height: 50px;
+  width: 140px;
+  text-decoration: none;
+  text-align: center;
+}
+.fishBtn:hover {
+  border-color: #e6d04f;
+  background-color: #212121;
+}
+.fishBtn:active {
+  border: 1px solid #333337;
+}
